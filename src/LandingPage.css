@@ -1,0 +1,176 @@
+.body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px; /* Adjust margin-top as needed */
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-container label {
+  position: absolute;
+  top: -8px;
+  left: 10px;
+  background-color: #f0f0f0;;
+  padding: 0 5px;
+  font-size: 16px;
+  color: #652c8f;
+  pointer-events: none;
+  transition: top 0.3s, left 0.3s, font-size 0.3s;
+}
+
+.input-container input,
+.date-picker-input {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid gray;
+  border-radius: 5px;
+  background-color: transparent; /* Remove background color */
+  transition: border-color 0.3s;
+}
+
+.input-container input:focus,
+.date-picker-input:focus {
+  outline: none;
+  border-color: black;
+}
+
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown) + label,
+.date-picker-input:focus + label,
+.date-picker-input:not(:placeholder-shown) + label {
+  top: 0;
+  left: 10px;
+  font-size: 14px;
+}
+
+.input-container input.dob-focused {
+  position: relative;
+}
+
+.input-container input.dob-focused::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 16px;
+  background-color: #000;
+  animation: blink-animation 1s step-end infinite;
+}
+
+@keyframes blink-animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.success-message {
+  color: green;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* .clear-button {
+  position: fixed;
+  right: 10px;
+  top: 100px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #000;
+} */
+
+.date-of-birth-container {
+  display: flex;
+  align-items: center;
+}
+
+.date-picker-input {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  height: 50px;
+  border: 2px solid grey;
+  border-radius: 5px;
+  background-color: transparent; /* Remove background color */
+  transition: border-color 0.3s;
+}
+
+.calendar-icon {
+  cursor: pointer;
+  margin-left: -20px;
+  font-size: 18px;
+}
+
+.time-picker-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+  margin-left: -30px;
+}
+
+.time-modal {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 100;
+}
+
+.time-picker {
+  display: flex;
+  align-items: center;
+}
+
+.time-picker-input {
+  width: 55px;
+  margin-right: 10px;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: transparent; /* Remove background color */
+}
+
+.close-button {
+  background-color: #652c8f;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 3px;
+}
+
+.close-button:hover {
+  background-color: #531d78;
+}

@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0; /* Set background color if needed */
+}
+
+.coin-container {
+  display: flex;
+  margin-top: -100px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Use viewport height to make it cover the entire screen */
+  padding: 20px; /* Optional: Add padding for better appearance */
+}
+
+.coin-container form {
+  width: 100%;
+  max-width: 400px; /* Limit the form width for better readability */
+  padding: 20px;
+  background-color: #f0f0f0; /* Set background color for the form */
+  border-radius: 8px; /* Optional: Add border radius for rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow for depth */
+}
+
+.select-container {
+  margin-bottom: 10px; /* Add space between select boxes */
+}
+
+select {
+  width: 250px; /* Set the width of the select box */
+  height: 40px; /* Set the height of the select box */
+  padding: 6px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.success-message, .error-message {
+  color: #652C8F; /* Set a consistent color for messages */
+}
+
+/* Add your existing styles here */
+
+.button-container {
+  display: flex;
+  flex-direction: column; /* Arrange buttons in a column */
+  align-items: center; /* Center buttons horizontally */
+}
+
+.button-container button {
+  margin-top: 10px; /* Adjust space between the buttons */
+}
+
+/* Default color for all options */
+#dropdown option {
+  color: black;
+}
+
+/* Specific color for the placeholder option */
+#dropdown option[value=""] {
+  color: grey;
+}

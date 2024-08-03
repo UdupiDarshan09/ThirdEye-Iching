@@ -1,0 +1,137 @@
+.body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0; /* Set background color if needed */
+}
+
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: -100px;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Use viewport height to make it cover the entire screen */
+  padding: 20px; /* Optional: Add padding for better appearance */
+}
+
+.signup-container form {
+  width: 100%;
+  max-width: 400px; /* Limit the form width for better readability */
+  padding: 20px;
+  background-color: #fff; /* Set background color for the form */
+  border-radius: 8px; /* Optional: Add border radius for rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow for depth */
+}
+
+/* Add additional styles as needed */
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon input {
+  padding-right: 20px; /* Adjust according to icon size */
+}
+
+.input-with-icon .clear-icon {
+  position: absolute;
+  top: 50%;
+  right: 5px; /* Adjust according to icon size */
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.calendar-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.date-of-birth-container {
+  position: relative;
+}
+
+.input-container {
+  position: relative;
+  
+}
+
+.clear-button {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #999;
+}
+
+.clear-button:hover {
+  color: #666;
+}
+
+/* Adjust the size of all textboxes */
+input[type="text"],
+input[type="int"],
+input[type="email"],
+input[type="password"] {
+  width: 300px;
+  height: 50px;
+  border-radius: 4px;
+  background-color: transparent; /* Remove background color */
+}
+
+.time-picker-button {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.time-picker-button:hover {
+  color: #666;
+}
+
+.textarea {
+  width: 300px; /* Full width */
+  height: 60px; /* Adequate height for textarea */
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  resize: vertical; /* Allow vertical resizing */
+  background-color: transparent; /* Remove background color */
+  border: 2px solid grey
+}
+
+.category-container {
+  margin-top: 10px;
+  margin-bottom: 20px; /* Add margin bottom to create space between radio buttons and submit button */
+}
+.category-label {
+  font-size: 21px;
+  margin-bottom: 5px;
+  color: #652C8F;
+  margin-left: -15px; /* Adjust the value to move it left */
+}
+
+.category-container .category-label {
+  font-size: 21px; /* Increase the font size here */
+  margin-bottom: 5px;
+  color: #652C8F;
+  margin-left: -15px; /* Adjust the value to move it left */
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+}
+
