@@ -1,0 +1,107 @@
+.hexagram-container {
+  display: flex;
+  margin-right: 20px; /* Add margin between hexagrams */
+  border: 1px solid #ddd; /* Border for the container */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the container */
+  background-color: #f9f9f9; /* Background color */
+  width: 300px; /* Fixed width */
+  height: 350px; /* Fixed height */
+  margin: 0 auto; /* Center the container */
+  flex-direction: column; /* Arrange items in a column */
+  justify-content: flex-start; /* Align content to the top */
+  align-items: center; /* Center content horizontally */
+}
+
+.hexagram {
+  display: flex;
+  flex-direction: column; /* Arrange lines vertically within hexagram */
+}
+
+.hexagram-line {
+  font-family: 'Courier New', Courier, monospace; /* Use a monospaced font */
+  line-height: 1; /* Ensure vertical alignment */
+  width: 110px; /* Width of the line */
+  height: 20px; /* Height of the horizontal line */
+  background-color: black; /* Color of the line */
+  margin-bottom: 5px; /* Spacing between each line */
+  position: relative; /* Enable absolute positioning of the X mark */
+}
+
+.hexagram-line.yin {
+  background-color: black;
+}
+
+.hexagram-line.yang {
+  background-color: black;
+}
+
+.hexagram-line.yin::before,
+.hexagram-line.yin::after {
+  content: "";
+  position: absolute;
+  left: 45%;
+  width: 5px; /* Increase the width for a thicker white line */
+  height: 50%;
+  background-color: white;
+}
+
+.hexagram-line.yin::before {
+  top: 0;
+}
+
+.hexagram-line.yin::after {
+  bottom: 0;
+}
+
+.x-mark {
+  position: absolute;
+  top: -1px; /* Position above the line */
+  left: 48%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  color: white; /* Color of the X mark */
+  font-size: 25px; /* Adjust font size */
+}
+
+.tab-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 10px; /* Adjust margin to bring tabs closer */
+}
+
+.tab {
+  font-size: 16px;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  color: black; /* Default color */
+  padding-bottom: 5px; /* Add padding to make room for the underline */
+}
+
+.tab.active {
+  color: #652C8F; /* Active color */
+}
+
+.underline {
+  position: absolute;
+  bottom: -9.5px; /* Move the underline closer to the tabs */
+  height: 2px;
+  background-color: #652C8F;
+  transition: transform 0.3s ease, width 0.3s ease;
+}
+
+.underline.hexagram1 {
+  width:12%; /* Reduce the width of the underline */
+  left: 38%; /* Adjust the position from the left */
+}
+
+.underline.hexagram2 {
+  width: 12%; /* Reduce the width of the underline */
+  right: 38%; /* Adjust the position from the right */
+}
+
+.hexagram-content {
+  display: flex;
+  justify-content: center;
+}
